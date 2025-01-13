@@ -186,9 +186,8 @@ public class ValidationItemControllerV2 {
         log.info("objectName={}", bindingResult.getObjectName());
         log.info("target={}", bindingResult.getTarget());
 
-
+        // 필드 검증 로직 => 같은거
 //        ValidationUtils.rejectIfEmptyOrWhitespace(bindingResult, "itemName", "required");
-
         // 필드 검증 로직
         if (!StringUtils.hasText(item.getItemName())) {
             // 상품명 유무
