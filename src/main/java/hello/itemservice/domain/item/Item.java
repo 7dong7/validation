@@ -11,7 +11,7 @@ public class Item {
 
     private Long id;
 
-    @NotBlank
+    @NotBlank(message = "공백안됨")
     private String itemName;
 
     @NotNull
