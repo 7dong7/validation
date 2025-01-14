@@ -99,7 +99,7 @@ public class ValidationItemControllerV2 {
         return "redirect:/validation/v2/items/{itemId}";
     }
 
-    // 검증 직접 처리
+    // field 에러 다른 생성자 // 오류 발생시 값을 초기화하지 않고 유지
 //    @PostMapping("/add")
     public String addItemV2(@ModelAttribute Item item,
                             BindingResult bindingResult, // item 에 바인딩이 잘 안되면 여기에 뭐가 담김
@@ -188,6 +188,7 @@ public class ValidationItemControllerV2 {
         return "redirect:/validation/v2/items/{itemId}";
     }
 
+    // 검증 rejectValue(), reject() 사용
 //    @PostMapping("/add")
     public String addItemV4(@ModelAttribute Item item,
                             BindingResult bindingResult, // item 에 바인딩이 잘 안되면 여기에 뭐가 담김
