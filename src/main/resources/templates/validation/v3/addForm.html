@@ -25,6 +25,7 @@
 
     <form action="item.html" th:action th:object="${item}" method="post">
 
+        <!-- 글로벌 오류 메시지 -->
         <div th:if="${#fields.hasGlobalErrors()}">
             <p class="field-error" th:each="err : ${#fields.globalErrors()}" th:text="${err}">글로벌 오류 메시지</p>
         </div>
@@ -40,7 +41,6 @@
             <input type="text" id="price" th:field="*{price}"
                    th:errorclass="field-error" class="form-control" placeholder="가격을 입력하세요">
             <div class="field-error" th:errors="*{price}">가격 오류</div>
-
         </div>
         <div>
             <label for="quantity" th:text="#{label.item.quantity}">수량</label>
